@@ -2,6 +2,7 @@
 
 require "bundler/setup"
 require "another_grape_cache"
+require "pry"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -13,4 +14,14 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+class FakeCacheBackend
+  def read(_key)
+    "foobar"
+  end
+end
+
+AnotherGrapeCache.configure do |config|
+  config.cache_backend = FakeCacheBackend.new
 end

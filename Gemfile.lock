@@ -19,6 +19,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     builder (3.2.3)
+    coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.0.5)
@@ -36,6 +37,7 @@ GEM
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
+    method_source (0.9.0)
     minitest (5.11.3)
     mustermann (1.0.2)
     mustermann-grape (1.0.0)
@@ -44,6 +46,9 @@ GEM
     parser (2.5.1.0)
       ast (~> 2.4.0)
     powerpack (0.1.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     rack (2.0.5)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -86,6 +91,7 @@ PLATFORMS
 DEPENDENCIES
   another_grape_cache!
   bundler (~> 1.16)
+  pry
   rake (~> 10.0)
   rspec (~> 3.0)
   rubocop (~> 0.56.0)
