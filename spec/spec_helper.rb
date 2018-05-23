@@ -20,6 +20,10 @@ class FakeCacheBackend
   def read(_key)
     "foobar"
   end
+
+  def write(_key, _value, **_options)
+    "bar"
+  end
 end
 
 AnotherGrapeCache.configure do |config|

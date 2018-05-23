@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Another implementation of Grape Cache"
   spec.description   = "This Gem implements caching for Grape using middlewares and Rails-like caching backend"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/SamMolokanov/another_grape_cache"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
