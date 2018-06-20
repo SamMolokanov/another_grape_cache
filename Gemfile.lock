@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    another_grape_cache (0.1.0)
+    another_grape_cache (0.1.1)
       activesupport
       grape
 

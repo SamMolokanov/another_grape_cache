@@ -16,7 +16,7 @@ module AnotherGrapeCache
           cache_key = cache_key_context.instance_exec(&cache_key_proc)
 
           format = env[Grape::Env::API_FORMAT]
-          uri_hash = Digest::MD5.hexdigest(env["REQUEST_URI"])
+          uri_hash = Digest::MD5.hexdigest(env["REQUEST_PATH"])
 
           env["grape.another-cache.key"] = "another-cache/#{format}/#{uri_hash}/#{cache_key}"
 
