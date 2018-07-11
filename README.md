@@ -49,7 +49,7 @@ Or install it yourself as:
       end
     end
 
-    cache(max_age: 10.minutes, expires_in: 5.minutes, private_cache: true) do
+    cache(max_age: 10.minutes, expires_in: 5.minutes, private_cache: true, cache_if: -> { rand(2) == 1 }) do
       posts.cache_key
     end
     
@@ -63,6 +63,7 @@ Or install it yourself as:
   * `max_age` - ActiveSupport time range, max cache time for client. Max age set as directive of the HTTP header `Cache-Control`, default 0
   * `private_cache` - Boolean, set `private/public` for the HTTP header `Cache-Control`, default false. 
   * `expires_in` - parameter for caching backend (max time to live).
+  * `cache_if` - a lambda which must return a Boolean value. The lambda is executed in the context of an endpoint
   * `block` - should return a value for `cache_key`. This block is executed inside a route context, helpers are available there
 
 Cache hit/miss status exposed as a HTTP header `X-Cache-Status: MISS/HIT`
