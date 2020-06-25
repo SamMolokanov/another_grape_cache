@@ -53,7 +53,7 @@ GEM
     rack-accept (0.4.5)
       rack (>= 0.4)
     rainbow (3.0.0)
-    rake (10.4.2)
+    rake (13.0.1)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -92,7 +92,7 @@ DEPENDENCIES
   another_grape_cache!
   bundler (~> 1.16)
   pry
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 0.56.0)
 
